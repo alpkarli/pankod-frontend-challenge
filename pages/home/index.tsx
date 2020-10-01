@@ -1,12 +1,14 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '@StyleModules/Home.module.scss'
+import { Footer, Navbar } from '@Components'
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Navbar />
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Pankod Frontend Challenge</title>
+        <link rel="icon" href="images/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -18,10 +20,7 @@ export default function Home() {
           Frontend Challenge
         </p>
       </main>
-
-      <footer className={styles.footer}>
-        Alperen Karlı
-      </footer>
+      <Footer />
     </div>
   )
 }
