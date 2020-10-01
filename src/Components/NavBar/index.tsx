@@ -11,8 +11,12 @@ const Navbar: React.FunctionComponent<INavbar.IProps> = (): JSX.Element => {
 		<div className={styles.header}>
 			<div className={utils["content-container"]}>
 				<div className={styles.header__content}>
-					<Link href="/dashboard">
-						<h1 className={styles.header__title}>DEMO Streaming</h1>
+					<Link href="/home" passHref>
+						<button
+							className={`${button["button--link"]} ${button.button} `}
+						>
+							<p className={styles.header__title}>DEMO Streaming</p>
+						</button>
 					</Link>
 					<div>
 						<button

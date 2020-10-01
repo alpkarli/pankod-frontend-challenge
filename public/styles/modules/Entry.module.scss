@@ -1,0 +1,34 @@
+@import "../base/settings";
+
+.entry__container {
+	flex-direction: column;
+	padding: $s-size 0;
+}
+
+.entry__image {
+	height: 201px;
+	width: 134px;
+}
+
+.entry__content {
+	position: relative;
+	text-align: center;
+	color: $white;
+	background-color: $dark-grey;
+	height: 201px;
+	width: 134px;
+}
+
+.entry__content__text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.entry__container__text {
+	white-space: nowrap;
+	width: 134px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
