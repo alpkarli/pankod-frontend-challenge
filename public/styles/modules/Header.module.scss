@@ -5,6 +5,16 @@
 	background: $blue;
 }
 
+.sub-header {
+	width: 100%;
+	background: $secondary;
+}
+
+.sub-header__title {
+	margin: 1rem;
+	color: white;
+}
+
 .header__content {
 	align-items: center;
 	display: flex;
@@ -24,7 +34,8 @@
 	margin: 0;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 900px) {
 	.header__content {
 		padding: 0;
 		&-right {
@@ -32,11 +43,5 @@
 			display: flex;
 			flex-flow: column;
 		}
-	}
-
-	.grid {
-		margin: 0;
-		flex-direction: row;
-		flex-wrap: wrap;
 	}
 }
