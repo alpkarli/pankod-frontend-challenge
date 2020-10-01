@@ -6,3 +6,8 @@
 	max-width: 120rem;
 }
 
+@media (max-width: 600px) {
+	.content-container {
+		padding: 0;
+	}
+}

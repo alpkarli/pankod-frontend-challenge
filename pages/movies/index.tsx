@@ -13,12 +13,12 @@ const Movies: NextPage<IMoviesPage.IProps> = () => {
 
 	if (error) return (
 		<main className={styles['main--sub']}>
-			<div>failed to load</div>;
+			<div>Oops, something went wrong...</div>;
 		</main>
 	) 
 	if (!movies) return(
 		<main className={styles['main--sub']}>
-			<div>loading...</div>;
+			<div>Loading...</div>;
 		</main>
 	)
 

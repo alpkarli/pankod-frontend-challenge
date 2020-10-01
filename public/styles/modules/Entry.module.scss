@@ -19,11 +19,16 @@
 	width: 134px;
 }
 
-.entry__content__text {
+.entry__content__element {
+    margin: 0;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    &--image {
+        width: 134px;
+    }
 }
 
 .entry__container__text {

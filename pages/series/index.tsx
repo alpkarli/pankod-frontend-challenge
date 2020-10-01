@@ -11,8 +11,16 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 const Series: NextPage<ISeriesPage.IProps> = () => {
 	const { data: series, error } = useSWR("/api/series", fetcher);
 
-	if (error) return <div>failed to load</div>;
-	if (!series) return <div>loading...</div>;
+	if (error) return (
+		<main className={styles['main--sub']}>
+			<div>Oops, something went wrong...</div>;
+		</main>
+	) 
+	if (!series) return(
+		<main className={styles['main--sub']}>
+			<div>Loading...</div>;
+		</main>
+	)
 
 	return (
 		<main className={styles['main--sub']}>

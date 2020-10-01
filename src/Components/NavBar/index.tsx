@@ -18,7 +18,7 @@ const Navbar: React.FunctionComponent<INavbar.IProps> = (): JSX.Element => {
 							<p className={styles.header__title}>DEMO Streaming</p>
 						</button>
 					</Link>
-					<div>
+					<div className={styles['header__content-right']}>
 						<button
 							className={`${button["button--link"]} ${button.button}`}
 						>

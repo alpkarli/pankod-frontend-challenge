@@ -1,7 +1,7 @@
-@import '../base/settings';
+@import "../base/settings";
 
 .header {
-    width: 100%;
+	width: 100%;
 	background: $blue;
 }
 
@@ -10,6 +10,10 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0 $xl-size;
+
+	&-right {
+		@extend .header__content;
+	}
 }
 
 .header__title {
@@ -18,4 +22,21 @@
 	font-weight: bold;
 	color: white;
 	margin: 0;
+}
+
+@media (max-width: 600px) {
+	.header__content {
+		padding: 0;
+		&-right {
+			align-content: center;
+			display: flex;
+			flex-flow: column;
+		}
+	}
+
+	.grid {
+		margin: 0;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }

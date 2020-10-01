@@ -1,5 +1,5 @@
 import React from "react";
-import { Entry } from "@Components/Entry";
+import { MainEntry } from "@Components/Entry";
 import LinkWithComponent from "@Components/Link";
 import styles from "@StyleModules/Home.module.scss";
 
@@ -28,10 +28,10 @@ export default function Home() {
 		<main className={styles.main}>
 			<div className={styles.grid}>
 				<LinkWithComponent to="/movies">
-					<Entry {...MoviesEntry}></Entry>
+					<MainEntry {...MoviesEntry}></MainEntry>
 				</LinkWithComponent>
 				<LinkWithComponent to="/series">
-					<Entry {...SeriesEntry}></Entry>
+					<MainEntry {...SeriesEntry}></MainEntry>
 				</LinkWithComponent>
 			</div>
 		</main>

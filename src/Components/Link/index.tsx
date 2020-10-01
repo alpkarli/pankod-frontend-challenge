@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject } from "react";
 import Link from "next/link";
 
 import { ILink } from "./Link";
@@ -7,7 +7,9 @@ import { ILink } from "./Link";
 export default React.forwardRef(({ to, children }: ILink.IProps, ref: any) => {
 	return (
 		<Link href={to} passHref>
-			<a href={ref}>{children}</a>
+			<a href={to}>
+				{children}
+			</a>
 		</Link>
 	);
 });
