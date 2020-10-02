@@ -1,40 +1,39 @@
-import moment from "moment";
-
 import { IFilter, IAction } from "@Interfaces";
+import { ActionConsts } from "@Definitions";
 
 const filtersReducerDefaultState: IFilter.IStateProps = {
 	text: "",
-	sortBy: "date",
-	startDate: moment().startOf("month"),
-	endDate: moment().endOf("month"),
+	sortBy: "yearDesc"
 };
 
 export const FilterReducer = (state = filtersReducerDefaultState, action: IAction<IFilter.IFilterPayload>) => {
 	switch (action.type) {
-		case "SET_TEXT_FILTER":
+		case ActionConsts.Filter.SetTextFilter:
+			console.log(action.payload);
+			
 			return {
 				...state,
-				text: action.text,
+				text: action.payload,
 			};
-		case "SORT_BY_AMOUNT":
+		case ActionConsts.Filter.SortByYearDesc:
 			return {
 				...state,
-				sortBy: "amount",
+				sortBy: "yearDesc",
 			};
-		case "SORT_BY_DATE":
+		case ActionConsts.Filter.SortByYearAsc:
 			return {
 				...state,
-				sortBy: "date",
+				sortBy: "yearAsc",
 			};
-		case "SET_START_DATE":
+		case ActionConsts.Filter.SortByTitleDesc:
 			return {
 				...state,
-				startDate: action.startDate,
+				sortBy: "titleDesc",
 			};
-		case "SET_END_DATE":
+		case ActionConsts.Filter.SortByTitleAsc:
 			return {
 				...state,
-				endDate: action.endDate,
+				sortBy: "titleAsc",
 			};
 		default:
 			return state;

@@ -6,12 +6,12 @@ import utils from "@StyleModules/Utils.module.scss";
 import { ISubbar } from "./SubBar";
 
 const selectTitle = (path: string) => {
-	switch (true) {
-		case path === "/home":
+	switch (path) {
+		case "/home":
 			return "Titles";
-		case path === "/series":
+		case "/series":
 			return "Series";
-		case path === "/movies":
+		case "/movies":
 			return "Movies";
 		default:
 			break;

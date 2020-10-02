@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { NextPage } from "next";
 import { IMoviesPage } from "@Interfaces/Pages/Movies";
 import { IEntry } from "@Interfaces";
-import { Entry } from "@Components";
+import { Entry, Filters } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -24,6 +24,7 @@ const Movies: NextPage<IMoviesPage.IProps> = () => {
 
 	return (
 		<main className={styles['main--sub']}>
+			<Filters />
 			<div className={styles.grid}>
 				{movies.map((movie: IEntry.IProps) => (
 					<Entry key={movie.title} {...movie} />

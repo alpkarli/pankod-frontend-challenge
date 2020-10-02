@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ILink } from "./Link";
 
 // Forward Refs, is useful
-export default React.forwardRef(({ to, children }: ILink.IProps, ref: any) => {
+const LinkWithComponent =  React.forwardRef(({ to, children }: ILink.IProps, ref: any) => {
 	return (
 		<Link href={to} passHref>
 			<a href={to}>
@@ -13,3 +13,5 @@ export default React.forwardRef(({ to, children }: ILink.IProps, ref: any) => {
 		</Link>
 	);
 });
+
+export { LinkWithComponent }

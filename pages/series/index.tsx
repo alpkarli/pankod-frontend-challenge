@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { NextPage } from "next";
 import { ISeriesPage } from "@Interfaces/Pages/Series";
 import { IEntry } from "@Interfaces";
-import { Entry } from "@Components";
+import { Entry, Filters } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -24,6 +24,7 @@ const Series: NextPage<ISeriesPage.IProps> = () => {
 
 	return (
 		<main className={styles['main--sub']}>
+			<Filters />
 			<div className={styles.grid}>
 				{series.map((serie: IEntry.IProps) => (
 					<Entry key={serie.title} {...serie} />

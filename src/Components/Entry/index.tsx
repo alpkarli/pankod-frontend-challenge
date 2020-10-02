@@ -6,7 +6,7 @@ const MainEntry: React.FunctionComponent<IEntry.IHomeProps> = (props): JSX.Eleme
 	return (
 		<div className={styles.entry__container}>
 			<div className={styles.entry__content}>
-				<h1 className={styles.entry__content__element}>{props.title.toUpperCase()}</h1>
+				<h2 className={styles.entry__content__element}>{props.title.toUpperCase()}</h2>
 				<img className={`${styles['entry__content__element--image']} ${styles.entry__content__element} `} src={props.images['Poster Art'].url}></img>
 			</div>
             <p className={styles.entry__container__text}>Popular {props.title}</p>

@@ -1,0 +1,21 @@
+@import "../base/settings";
+
+.filters {
+    width: 100%;
+}
+
+.filters__content {
+    width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	padding: $m-size $l-size 0 $l-size;
+}
+
+.lens {
+    display: block;
+    height: 21px;
+    width: 21px;
+}
+

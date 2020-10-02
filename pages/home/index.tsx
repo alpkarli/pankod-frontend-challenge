@@ -1,6 +1,6 @@
 import React from "react";
 import { MainEntry } from "@Components/Entry";
-import LinkWithComponent from "@Components/Link";
+import { LinkWithComponent } from "@Components/Link";
 import styles from "@StyleModules/Home.module.scss";
 
 const placeholderURL = "/images/placeholder.png";

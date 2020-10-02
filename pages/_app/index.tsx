@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { AppProps } from 'next/app'
 import { useStore } from "@Redux";
 import '@Public/styles/globals.scss'
-import { Layout } from '@Components/Layout';
+import { Layout } from "@Components";
 
 function App({ Component, pageProps }: AppProps) {
   const store = useStore(pageProps.initialReduxState)

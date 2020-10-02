@@ -3,26 +3,24 @@ import { ActionConsts } from "@Definitions";
 // #endregion Local Imports
 
 export const FilterActions = {
-	SetTextFilter: (text = "") => ({
+	SetTextFilter: (text: string) => ({
 		type: ActionConsts.Filter.SetTextFilter,
-		text,
+		payload: text,
 	}),
 
-	sortByDate: () => ({
-		type: ActionConsts.Filter.SortByDate,
+	SortByYearDesc: () => ({
+		type: ActionConsts.Filter.SortByYearDesc,
 	}),
 
-	sortByAmount: () => ({
-		type: ActionConsts.Filter.SortByAmount,
+	SortByYearAsc: () => ({
+		type: ActionConsts.Filter.SortByYearAsc,
 	}),
 
-	setStartDate: (startDate: Date) => ({
-		type: ActionConsts.Filter.SetStartDate,
-		startDate,
+	SortByTitleDesc: () => ({
+		type: ActionConsts.Filter.SortByTitleDesc,
 	}),
 
-	setEndDate: (endDate: Date) => ({
-		type: ActionConsts.Filter.SetEndDate,
-		endDate,
+	SortByTitleAsc: () => ({
+		type: ActionConsts.Filter.SortByTitleAsc,
 	}),
 };

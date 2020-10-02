@@ -1,9 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import styles from "@StyleModules/Home.module.scss";
-import { Footer, Navbar } from "@Components";
+import { Footer, Navbar, Subbar } from "@Components";
 import { LayoutProps } from "./Layout";
-import { Subbar } from "@Components/SubBar";
 
 const Layout: React.FunctionComponent<LayoutProps> = ({
 	children,
