@@ -3,14 +3,15 @@ import { ActionConsts } from "@Definitions";
 
 const filtersReducerDefaultState: IFilter.IStateProps = {
 	text: "",
-	sortBy: "yearDesc"
+	sortBy: "yearAsc",
 };
 
-export const FilterReducer = (state = filtersReducerDefaultState, action: IAction<IFilter.IFilterPayload>) => {
+export const FilterReducer = (
+	state = filtersReducerDefaultState,
+	action: IAction<IFilter.IFilterPayload>
+) => {
 	switch (action.type) {
 		case ActionConsts.Filter.SetTextFilter:
-			console.log(action.payload);
-			
 			return {
 				...state,
 				text: action.payload,
@@ -34,6 +35,11 @@ export const FilterReducer = (state = filtersReducerDefaultState, action: IActio
 			return {
 				...state,
 				sortBy: "titleAsc",
+			};
+		case ActionConsts.Filter.ResetFilter:
+			return {
+				...state,
+				...filtersReducerDefaultState
 			};
 		default:
 			return state;

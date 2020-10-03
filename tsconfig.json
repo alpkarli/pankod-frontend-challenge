@@ -30,6 +30,8 @@
       "@Pages/*": ["pages/*"],
       "@Reducers": ["src/Redux/Reducers"],
       "@Reducers/*": ["src/Redux/Reducers/*"],
+      "@Selectors": ["src/Redux/Selectors"],
+      "@Selectors/*": ["src/Redux/Selectors/*"],
       "@Redux": ["src/Redux"],
       "@Redux/*": ["src/Redux/*"],
       "@Server/*": ["server/*"],

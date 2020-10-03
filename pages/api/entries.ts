@@ -5,6 +5,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const data = require('./sample.json');
 
 export default (_: NextApiRequest, res: NextApiResponse<IEntry.IProps>) => {
+	// throw Error('error');
 	res.statusCode = 200;
-	res.json(data.entries.filter((entry: IEntry.IProps) => entry.releaseYear > 2010 && entry.programType === 'series').slice(0, 21).sort());
+	res.json(data.entries.filter((entry: IEntry.IProps) => entry.releaseYear > 2010));
 };

@@ -1,29 +1,47 @@
-import React from "react";
-import useSWR from "swr";
+import React, { useEffect } from "react";
 import { NextPage } from "next";
-import { ISeriesPage } from "@Interfaces/Pages/Series";
-import { IEntry } from "@Interfaces";
+import { IEntry, IStore, ISeriesPage } from "@Interfaces";
 import { Entry, Filters } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
-
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+import { useDispatch, useSelector } from "react-redux";
+import { SeriesSelector } from "@Redux/Selectors/series";
+import { EntriesActions, FilterActions } from "@Actions";
 
 const Series: NextPage<ISeriesPage.IProps> = () => {
-	const { data: series, error } = useSWR("/api/series", fetcher);
+	const dispatch = useDispatch();
 
-	if (error) return (
-		<main className={styles['main--sub']}>
-			<div>Oops, something went wrong...</div>;
-		</main>
-	) 
-	if (!series) return(
-		<main className={styles['main--sub']}>
-			<div>Loading...</div>;
-		</main>
-	)
+	const entries = useSelector((state: IStore) => state.entries);
+
+	const filter = useSelector((state: IStore) => state.filter);
+
+	useEffect(() => {
+		if (entries.entries.length === 0) {
+			dispatch(EntriesActions.FetchEntries());
+		}
+		return () => {
+			dispatch(FilterActions.ResetFilter());
+		};
+	}, []);
+
+	if (entries.error)
+		return (
+			<main className={styles["main--sub"]}>
+				<div>Oops, something went wrong...</div>
+			</main>
+		);
+
+	if (entries.loading) {
+		return (
+			<main className={styles["main--sub"]}>
+				<div>Loading...</div>
+			</main>
+		);
+	}
+
+	const series = SeriesSelector(entries.entries, filter);
 
 	return (
-		<main className={styles['main--sub']}>
+		<main className={styles["main--sub"]}>
 			<Filters />
 			<div className={styles.grid}>
 				{series.map((serie: IEntry.IProps) => (

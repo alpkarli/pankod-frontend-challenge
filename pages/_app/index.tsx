@@ -5,9 +5,9 @@ import { useStore } from "@Redux";
 import '@Public/styles/globals.scss'
 import { Layout } from "@Components";
 
-function App({ Component, pageProps }: AppProps) {
+const WebApp = ({ Component, pageProps }: AppProps) => {
   const store = useStore(pageProps.initialReduxState)
-
+  
   return (
     <Provider store={store}>
       <Layout>
@@ -17,4 +17,4 @@ function App({ Component, pageProps }: AppProps) {
   )
 }
 
-export default App
+export default WebApp

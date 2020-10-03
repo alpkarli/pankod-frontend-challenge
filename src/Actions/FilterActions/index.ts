@@ -8,6 +8,8 @@ export const FilterActions = {
 		payload: text,
 	}),
 
+	ResetFilter: () => ({ type: ActionConsts.Filter.ResetFilter }),
+
 	SortByYearDesc: () => ({
 		type: ActionConsts.Filter.SortByYearDesc,
 	}),
