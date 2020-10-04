@@ -14,7 +14,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 				<Subbar />
 				<Head>
 					<title>Pankod Frontend Challenge</title>
-					<link rel="icon" href="images/favicon.ico" />
+					<link rel="icon" href="/images/favicon.ico" />
 				</Head>
 				{children}
 				<Footer />

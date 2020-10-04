@@ -1,2 +1,3 @@
-import { MoviesSelector } from './movies'
-import { SeriesSelector } from './series'
+export { MoviesSelector } from './movies'
+export { SeriesSelector } from './series'
+export { EntrySelectorByTitle } from './entry'

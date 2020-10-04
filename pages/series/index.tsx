@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { NextPage } from "next";
 import { IEntry, IStore, ISeriesPage } from "@Interfaces";
-import { Entry, Filters } from "@Components";
+import { Entry, Filters, LinkWithComponent } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { SeriesSelector } from "@Redux/Selectors/series";
+import { SeriesSelector } from "@Redux/Selectors";
 import { EntriesActions, FilterActions } from "@Actions";
 
 const Series: NextPage<ISeriesPage.IProps> = () => {
@@ -45,7 +45,9 @@ const Series: NextPage<ISeriesPage.IProps> = () => {
 			<Filters />
 			<div className={styles.grid}>
 				{series.map((serie: IEntry.IProps) => (
-					<Entry key={serie.title} {...serie} />
+					<LinkWithComponent key={serie.title} as={`/entry/${encodeURIComponent(serie.title)}`} to={'/entry/[title]'}>
+						<Entry  {...serie} />
+					</LinkWithComponent>
 				))}
 			</div>
 		</main>

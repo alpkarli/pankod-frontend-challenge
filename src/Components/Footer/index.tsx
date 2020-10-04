@@ -22,14 +22,14 @@ const Footer: React.FunctionComponent<IFooter.IProps> = (): JSX.Element => {
 					</div>
 					<div className={styles["footer__content--logo"]}>
 						<div className={styles["footer__content--social"]}>
-							<img src="images/social/facebook-white.svg" className={styles.social} />
-							<img src="images/social/twitter-white.svg" className={styles.social} />
-							<img src="images/social/instagram-white.svg" className={styles.social} />
+							<img src="/images/social/facebook-white.svg" className={styles.social} />
+							<img src="/images/social/twitter-white.svg" className={styles.social} />
+							<img src="/images/social/instagram-white.svg" className={styles.social} />
 						</div>
 						<div className={styles["footer__content--store"]}>
-							<img src="images/store/app-store.svg" className={styles.store} />
-							<img src="images/store/play-store.svg" className={styles.store} />
-							<img src="images/store/windows-store.svg" className={styles.store} />
+							<img src="/images/store/app-store.svg" className={styles.store} />
+							<img src="/images/store/play-store.svg" className={styles.store} />
+							<img src="/images/store/windows-store.svg" className={styles.store} />
 						</div>
 					</div>
 				</div>

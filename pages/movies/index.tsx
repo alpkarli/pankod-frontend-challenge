@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { NextPage } from "next";
 import { IEntry, IMoviesPage } from "@Interfaces";
-import { Entry, Filters } from "@Components";
+import { Entry, Filters, LinkWithComponent } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { MoviesSelector } from "@Redux/Selectors/movies";
+import { MoviesSelector } from "@Redux/Selectors";
 import { IStore } from "@Redux/IStore";
 import { EntriesActions, FilterActions } from "@Actions";
 
@@ -44,7 +44,9 @@ const Movies: NextPage<IMoviesPage.IProps> = () => {
 			<Filters />
 			<div className={styles.grid}>
 				{movies.map((movie: IEntry.IProps) => (
-					<Entry key={movie.title} {...movie} />
+					<LinkWithComponent key={movie.title} as={`/entry/${encodeURIComponent(movie.title)}`} to={'/entry/[title]'}>
+						<Entry  {...movie} />
+					</LinkWithComponent>
 				))}
 			</div>
 		</main>

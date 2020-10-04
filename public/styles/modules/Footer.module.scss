@@ -57,7 +57,8 @@
 
 @media (max-width: 900px) {
 	.footer__content {
-		padding: $s-size $s-size;
+        padding: $s-size $s-size;
+        text-align: center;
     }
     .footer__content--logo {
         flex-direction: column;

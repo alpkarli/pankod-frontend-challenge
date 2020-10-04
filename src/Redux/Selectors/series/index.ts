@@ -1,4 +1,4 @@
-import { IFilter, IEntry, IEntries } from "@Interfaces";
+import { IFilter, IEntry } from "@Interfaces";
 
 export const SeriesSelector = (
 	entries: IEntry.IProps[],

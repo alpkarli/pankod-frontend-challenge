@@ -14,6 +14,19 @@ const MainEntry: React.FunctionComponent<IEntry.IHomeProps> = (props): JSX.Eleme
 	);
 };
 
+const EntryPageContent: React.FunctionComponent<IEntry.IProps> = (props): JSX.Element => {
+	return (
+		<div className={styles['entry-page__container']}>
+            <h1>{props.title}</h1>
+			<div>
+				<img className={styles['entry-page__image']} src={props.images['Poster Art'].url}></img>
+			</div>
+			<p><b>{props.releaseYear}</b></p>
+			<p>{props.description}</p>
+		</div>
+	);
+};
+
 const Entry: React.FunctionComponent<IEntry.IProps> = (props): JSX.Element => {
 	return (
 		<div className={styles.entry__container}>
@@ -25,6 +38,6 @@ const Entry: React.FunctionComponent<IEntry.IProps> = (props): JSX.Element => {
 	);
 };
 
-export { Entry, MainEntry };
+export { Entry, MainEntry, EntryPageContent };
 
 

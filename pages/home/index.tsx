@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import { MainEntry } from "@Components/Entry";
-import { LinkWithComponent } from "@Components/Link";
+import { MainEntry, LinkWithComponent } from "@Components";
 import styles from "@StyleModules/Home.module.scss";
-import useSWR from "swr";
 import { useDispatch, useSelector } from "react-redux";
 import { EntriesActions } from "@Actions";
 import { IHomePage, IStore } from "@Interfaces";

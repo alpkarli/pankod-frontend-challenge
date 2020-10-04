@@ -37,3 +37,18 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+.entry-page__container {
+	max-width: 600px;
+	display: flex;
+	flex: 1 1;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	padding: $s-size 0;
+}
+
+.entry-page__image {
+	height: 320px;
+	width: 240px;
+}

@@ -34,7 +34,7 @@ export const EntriesActions = {
 	}),
 	FetchEntries: () => async (dispatch: Dispatch) => {
 		dispatch(EntriesActions.FetchEntriesBegin());
-		return fetch("api/entries")
+		return fetch("/api/entries")
 			.then(handleErrors)
 			.then((res) => res.json())
 			.then((json) => {
