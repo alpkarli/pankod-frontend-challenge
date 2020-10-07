@@ -14,7 +14,7 @@ const selectTitle = (path: string) => {
 		case "/movies":
 			return "Movies";
 		default:
-			break;
+			return "Titles";;
 	}
 };
 
@@ -27,7 +27,7 @@ const Subbar: React.FunctionComponent<ISubbar.IProps> = (): JSX.Element => {
 			<div className={utils["content-container"]}>
 				<div className={styles.header__content}>
 					<h2 className={styles["sub-header__title"]}>
-						Popular {title}
+						{`Popular ${title}`}
 					</h2>
 				</div>
 			</div>

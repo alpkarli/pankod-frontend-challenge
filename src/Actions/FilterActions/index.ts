@@ -3,7 +3,7 @@ import { ActionConsts } from "@Definitions";
 // #endregion Local Imports
 
 export const FilterActions = {
-	SetTextFilter: (text: string) => ({
+	SetTextFilter: (text: string = "") => ({
 		type: ActionConsts.Filter.SetTextFilter,
 		payload: text,
 	}),

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkWithComponent should match snapshot 1`] = `
+<a
+  href="/movies"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  Children
+</a>
+`;

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry Components Entry should match snapshot 1`] = `
+<div
+  className="entry__container"
+>
+  <div
+    className="entry__content"
+  >
+    <img
+      className="entry__image"
+      src="abc.com/image.jpeg"
+    />
+  </div>
+  <p
+    className="entry__container__text"
+  >
+    Movie1
+  </p>
+</div>
+`;
+
+exports[`Entry Components EntryPageContent should match snapshot 1`] = `
+<div
+  className="entry-page__container"
+>
+  <h1>
+    Movie1
+  </h1>
+  <div>
+    <img
+      className="entry-page__image"
+      src="abc.com/image.jpeg"
+    />
+  </div>
+  <p>
+    <b>
+      2011
+    </b>
+  </p>
+  <p>
+    Lorem Ipsum
+  </p>
+</div>
+`;
+
+exports[`Entry Components MainEntry should match snapshot 1`] = `
+<div
+  className="entry__container"
+>
+  <div
+    className="entry__content"
+  >
+    <h2
+      className="entry__content__element"
+    >
+      MOVIE1
+    </h2>
+    <img
+      className="entry__content__element--image entry__content__element "
+      src="abc.com/image.jpeg"
+    />
+  </div>
+  <p
+    className="entry__container__text"
+  >
+    Popular 
+    Movie1
+  </p>
+</div>
+`;

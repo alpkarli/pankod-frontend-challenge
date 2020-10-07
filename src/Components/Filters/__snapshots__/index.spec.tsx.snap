@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters should match snapshot 1`] = `
+<div
+  className="filters"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="filters__content"
+    >
+      <div
+        className="col-xl-4 col-lg-8 col-md-12"
+      >
+        <div
+          className="input-group"
+        >
+          <input
+            aria-describedby="Search"
+            aria-label="Search"
+            className="form-control"
+            onChange={[Function]}
+            placeholder="Search..."
+            type="text"
+            value=""
+          />
+          <div
+            className="input-group-append"
+          >
+            <button
+              className="btn btn-primary"
+              type="button"
+            >
+              <img
+                className="lens"
+                src="images/lens.svg"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-xl-3 col-lg-4 col-md-12 mt-4 mt-lg-0"
+      >
+        <select
+          className="form-control"
+          id="filters"
+          onChange={[Function]}
+          value="yearAsc"
+        >
+          <option
+            value="yearAsc"
+          >
+            Sort by year in asc
+          </option>
+          <option
+            value="yearDesc"
+          >
+            Sort by year in desc
+          </option>
+          <option
+            value="titleAsc"
+          >
+            Sort by title in asc
+          </option>
+          <option
+            value="titleDesc"
+          >
+            Sort by title in desc
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+`;

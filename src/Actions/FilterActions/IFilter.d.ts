@@ -1,6 +1,5 @@
 declare namespace IFilter {
 	export interface IFilterPayload {
-		payload: any
 	}
 
 	export interface IStateProps {

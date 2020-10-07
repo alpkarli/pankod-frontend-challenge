@@ -2,6 +2,4 @@
 
 ## **To Dos:**
 
-- Unit Tests
-- Responsive Design
-- React & State Management
+- Check line 42-43 for Filter Component Test

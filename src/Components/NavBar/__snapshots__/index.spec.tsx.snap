@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match snapshot 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <button
+        className="button--link button "
+        href="/home"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        <p
+          className="header__title"
+        >
+          DEMO Streaming
+        </p>
+      </button>
+      <div
+        className="header__content-right"
+      >
+        <button
+          className="button--link button"
+        >
+          Log in
+        </button>
+        <button
+          className="button button--secondary "
+        >
+          Start your free trial
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 
 const Filters: React.FunctionComponent<IFilters.IProps> = (): JSX.Element => {
 	const [inputControl, setInputControl] = useState(false);
+	const [selectValue, setSelectValue] = useState("yearAsc");
+	const [inputValue, setInputValue] = useState("");
 	const dispatch = useDispatch();
 
 	const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -24,12 +26,12 @@ const Filters: React.FunctionComponent<IFilters.IProps> = (): JSX.Element => {
 			case "titleAsc":
 				dispatch(FilterActions.SortByTitleAsc());
 				break;
-			default:
-				break;
 		}
+		setSelectValue(e.target.value);
 	};
 
 	const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+		setInputValue(e.target.value);
 		if (e.target.value.length >= 3) {
 			dispatch(FilterActions.SetTextFilter(e.target.value));
 			setInputControl(true);
@@ -48,6 +50,7 @@ const Filters: React.FunctionComponent<IFilters.IProps> = (): JSX.Element => {
 					<div className="col-xl-4 col-lg-8 col-md-12">
 						<div className="input-group">
 							<input
+								value={inputValue}
 								type="text"
 								className="form-control"
 								placeholder="Search..."
@@ -72,7 +75,7 @@ const Filters: React.FunctionComponent<IFilters.IProps> = (): JSX.Element => {
 					</div>
 					<div className="col-xl-3 col-lg-4 col-md-12 mt-4 mt-lg-0">
 						<select
-							defaultValue="yearAsc"
+							value={selectValue}
 							className="form-control"
 							id="filters"
 							onChange={(e: ChangeEvent<HTMLSelectElement>) =>

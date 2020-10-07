@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshot 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="footer__content"
+    >
+      <div
+        className="footer__content--text"
+      >
+        Home |  Terms and Conditions |  Privacy Policy |  Collection Statement |  Help |  Manage Account
+      </div>
+      <div>
+        <p>
+          Copyright © 2016 DEMO Streaming. All Rights Reserved.
+        </p>
+      </div>
+      <div
+        className="footer__content--logo"
+      >
+        <div
+          className="footer__content--social"
+        >
+          <img
+            className="social"
+            src="/images/social/facebook-white.svg"
+          />
+          <img
+            className="social"
+            src="/images/social/twitter-white.svg"
+          />
+          <img
+            className="social"
+            src="/images/social/instagram-white.svg"
+          />
+        </div>
+        <div
+          className="footer__content--store"
+        >
+          <img
+            className="store"
+            src="/images/store/app-store.svg"
+          />
+          <img
+            className="store"
+            src="/images/store/play-store.svg"
+          />
+          <img
+            className="store"
+            src="/images/store/windows-store.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

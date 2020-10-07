@@ -45,7 +45,7 @@ export const EntriesActions = {
 	},
 };
 
-function handleErrors(response: any) {
+export const handleErrors = (response: any) => {
 	if (!response.ok) {
 		throw Error(response.statusText);
 	}

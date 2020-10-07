@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subbar should match snapshot 1`] = `
+<div
+  className="sub-header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <h2
+        className="sub-header__title"
+      >
+        Popular Titles
+      </h2>
+    </div>
+  </div>
+</div>
+`;

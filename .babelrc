@@ -1,3 +1,35 @@
 {
-    "presets": ["next/babel"]
+    "presets": ["next/babel"],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./"],
+                "alias": {
+                    "@Actions": ["./src/Actions"],
+                    "@Actions*": ["./src/Actions/*"],
+                    "@Components/*": ["./src/Components/*"],
+                    "@Components": ["./src/Components"],
+                    "@Definitions/*": ["./src/Definitions/*"],
+                    "@Definitions": ["./src/Definitions"],
+                    "@Interfaces": ["./src/Interfaces"],
+                    "@Interfaces/*": ["./src/Interfaces/*"],
+                    "@Pages/*": ["./pages/*"],
+                    "@Reducers": ["./src/Redux/Reducers"],
+                    "@Reducers/*": ["./src/Redux/Reducers/*"],
+                    "@Selectors": ["./src/Redux/Selectors"],
+                    "@Selectors/*": ["./src/Redux/Selectors/*"],
+                    "@Redux": ["./src/Redux"],
+                    "@Redux/*": ["./src/Redux/*"],
+                    "@Server/*": ["./server/*"],
+                    "@Services": ["./src/Services"],
+                    "@Services/*": ["./src/Services/*"],
+                    "@Public/*": ["./public/*"],
+                    "@StyleModules/*": ["././public/styles/modules/*"],
+                    "@Styled/*": ["./src/Styled/*"],
+                    "@Test/*": ["./test/*"]
+                }
+            }
+        ],
+    ]
 }

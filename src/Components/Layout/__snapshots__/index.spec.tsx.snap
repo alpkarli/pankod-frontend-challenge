@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should match snapshot 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="header"
+    >
+      <div
+        className="content-container"
+      >
+        <div
+          className="header__content"
+        >
+          <button
+            className="button--link button "
+            href="/home"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <p
+              className="header__title"
+            >
+              DEMO Streaming
+            </p>
+          </button>
+          <div
+            className="header__content-right"
+          >
+            <button
+              className="button--link button"
+            >
+              Log in
+            </button>
+            <button
+              className="button button--secondary "
+            >
+              Start your free trial
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sub-header"
+    >
+      <div
+        className="content-container"
+      >
+        <div
+          className="header__content"
+        >
+          <h2
+            className="sub-header__title"
+          >
+            Popular Titles
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      Content
+    </div>
+    <div
+      className="footer"
+    >
+      <div
+        className="content-container"
+      >
+        <div
+          className="footer__content"
+        >
+          <div
+            className="footer__content--text"
+          >
+            Home |  Terms and Conditions |  Privacy Policy |  Collection Statement |  Help |  Manage Account
+          </div>
+          <div>
+            <p>
+              Copyright © 2016 DEMO Streaming. All Rights Reserved.
+            </p>
+          </div>
+          <div
+            className="footer__content--logo"
+          >
+            <div
+              className="footer__content--social"
+            >
+              <img
+                className="social"
+                src="/images/social/facebook-white.svg"
+              />
+              <img
+                className="social"
+                src="/images/social/twitter-white.svg"
+              />
+              <img
+                className="social"
+                src="/images/social/instagram-white.svg"
+              />
+            </div>
+            <div
+              className="footer__content--store"
+            >
+              <img
+                className="store"
+                src="/images/store/app-store.svg"
+              />
+              <img
+                className="store"
+                src="/images/store/play-store.svg"
+              />
+              <img
+                className="store"
+                src="/images/store/windows-store.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
